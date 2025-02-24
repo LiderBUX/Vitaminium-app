@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/Vitaminium-app/', // Указываем путь для GitHub Pages
+  base: '/Vitaminium-app/', // Путь для GitHub Pages
 });
