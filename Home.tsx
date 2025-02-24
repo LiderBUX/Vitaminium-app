@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
 export default function Home() {
@@ -16,27 +15,27 @@ export default function Home() {
       <p className="text-gray-700 mb-6 text-center">Держи всё под контролем с Vitaminium!</p>
       
       <div className="w-full max-w-sm bg-white rounded-2xl shadow-lg p-6 space-y-4">
-        <Button className="w-full bg-gradient-to-r from-[#05D243] to-gray-500 text-white py-3 rounded-xl text-lg">
+        <button className="w-full bg-gradient-to-r from-[#05D243] to-gray-500 text-white py-3 rounded-xl text-lg">
           📅 Добавить приём витаминов
-        </Button>
-        <Button className="w-full bg-gradient-to-r from-[#05D243] to-gray-500 text-white py-3 rounded-xl text-lg">
+        </button>
+        <button className="w-full bg-gradient-to-r from-[#05D243] to-gray-500 text-white py-3 rounded-xl text-lg">
           📊 АД, уровень сахара 
-        </Button>
-        <Button className="w-full bg-gradient-to-r from-[#05D243] to-gray-500 text-white py-3 rounded-xl text-lg">
+        </button>
+        <button className="w-full bg-gradient-to-r from-[#05D243] to-gray-500 text-white py-3 rounded-xl text-lg">
           🩺 Самочувствие
-        </Button>
-        <Button className="w-full bg-gradient-to-r from-[#05D243] to-gray-500 text-white py-3 rounded-xl text-lg">
+        </button>
+        <button className="w-full bg-gradient-to-r from-[#05D243] to-gray-500 text-white py-3 rounded-xl text-lg">
           🔔 Напоминания
-        </Button>
-        <Button className="w-full bg-gradient-to-r from-[#05D243] to-gray-500 text-white py-3 rounded-xl text-lg">
+        </button>
+        <button className="w-full bg-gradient-to-r from-[#05D243] to-gray-500 text-white py-3 rounded-xl text-lg">
           📌 Женский календарь
-        </Button>
-        <Button className="w-full bg-gradient-to-r from-[#05D243] to-gray-500 text-white py-3 rounded-xl text-lg">
+        </button>
+        <button className="w-full bg-gradient-to-r from-[#05D243] to-gray-500 text-white py-3 rounded-xl text-lg">
           🛒 Каталог
-        </Button>
-        <Button className="w-full bg-gradient-to-r from-[#05D243] to-gray-500 text-white py-3 rounded-xl text-lg">
+        </button>
+        <button className="w-full bg-gradient-to-r from-[#05D243] to-gray-500 text-white py-3 rounded-xl text-lg">
           📢 Поделиться с друзьями
-        </Button>
+        </button>
       </div>
     </div>
   );
