@@ -36,3 +36,20 @@ p {
     cursor: pointer;
 }
 
+/* Дополнительные стили для страницы приёма витаминов */
+.vitamin-row {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+.times-container {
+    margin-top: 10px;
+    text-align: left;
+}
+
+.time-input {
+    padding: 5px;
+}
+
