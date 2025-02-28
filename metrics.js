@@ -1,4 +1,4 @@
-// === Код для страницы метрик (АД, сахар, температура) ===
+document.addEventListener('DOMContentLoaded', () => {
   const metricsForm = document.getElementById('metrics-form');
   if (metricsForm) {
     const metricsList = document.getElementById('metricsList');
@@ -49,7 +49,7 @@
       let sugarLevel = document.getElementById("sugar-level").value;
       const temperature = document.getElementById("temperature").value;
       
-      // Замена запятых на точки для корректного формата числа
+      // Заменяем запятые на точки в значении сахара, чтобы принимать дробные числа
       sugarLevel = sugarLevel.replace(/,/g, '.');
       
       // Проверяем, что заполнены дата, время и хотя бы один показатель
