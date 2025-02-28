@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Самочувствие - Vitaminium</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Запись о самочувствии</h1>
+    <form id="wellbeing-form">
+      <div>
+        <label for="wb-date">Дата:</label><br>
+        <input type="date" id="wb-date" required>
+      </div>
+      <div>
+        <label for="wb-time">Время:</label><br>
+        <input type="time" id="wb-time" required>
+      </div>
+      <div>
+        <label for="wb-description">Самочувствие:</label><br>
+        <textarea id="wb-description" placeholder="Опишите своё самочувствие..." rows="4" required></textarea>
+      </div>
+      <button type="submit" class="button">Сохранить запись</button>
+    </form>
+    
+    <hr>
+    
+    <h2>Сохранённые записи</h2>
+    <div id="wellbeingList"></div>
+    
+    <button class="button center-button" onclick="window.location.href='index.html'">Вернуться на главную</button>
+  </div>
+  
+  <script src="wellbeing.js"></script>
+</body>
+</html>
