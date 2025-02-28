@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         const deleteBtn = document.createElement("button");
         deleteBtn.textContent = "Удалить";
-        deleteBtn.classList.add("center-button");
+        deleteBtn.classList.add("compact-button");
         deleteBtn.addEventListener('click', () => {
           if (confirm("Удалить эти показатели?")) {
             metricsData.splice(index, 1);
