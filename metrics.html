@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Показатели здоровья - Vitaminium</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Показатели здоровья</h1>
+    <form id="metrics-form">
+      <div>
+        <label for="metrics-date">Дата:</label><br>
+        <input type="date" id="metrics-date" name="metrics-date" required>
+      </div>
+      <div>
+        <label for="metrics-time">Время:</label><br>
+        <input type="time" id="metrics-time" name="metrics-time" required>
+      </div>
+      <div>
+        <label for="blood-pressure">АД (давление):</label><br>
+        <input type="text" id="blood-pressure" name="blood-pressure" placeholder="например, 120/80" required>
+      </div>
+      <div>
+        <label for="sugar-level">Уровень сахара:</label><br>
+        <input type="number" id="sugar-level" name="sugar-level" placeholder="Значение сахара">
+      </div>
+      <div>
+        <label for="temperature">Температура:</label><br>
+        <input type="number" step="0.1" id="temperature" name="temperature" placeholder="Температура">
+      </div>
+      <button type="submit" class="button">Сохранить показатели</button>
+    </form>
+    
+    <hr>
+    
+    <h2>Сохранённые показатели</h2>
+    <div id="metricsList"></div>
+    
+    <button class="button center-button" onclick="window.location.href='index.html'">Вернуться на главную</button>
+  </div>
+  
+  <script src="script.js"></script>
+
+  <footer class="footer">
+  <p>© Дневник здоровья Vitaminium</p>
+</footer>
+
+</body>
+</html>
