@@ -1,13 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Проверяем, находимся ли мы на странице витаминов (есть ли элемент addVitaminBtn)
+  // Логика для страницы витаминов (если элемент addVitaminBtn существует)
   const addVitaminBtn = document.getElementById('addVitaminBtn');
   if (addVitaminBtn) {
     const vitaminsList = document.getElementById('vitaminsList');
     
-    // Загружаем данные из localStorage или создаем пустой массив
+    // Загружаем сохранённые данные или создаём пустой массив
     let vitaminsData = JSON.parse(localStorage.getItem("vitaminsData")) || [];
     
-    // Функция сохранения данных
+    // Функция сохранения данных в localStorage
     function saveVitaminsData() {
       localStorage.setItem("vitaminsData", JSON.stringify(vitaminsData));
     }
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const timeWrapper = document.createElement('div');
         timeWrapper.style.marginTop = "5px";
         
-        // Поле с выбранным временем (отключено для редактирования)
+        // Поле с выбранным временем (только для отображения)
         const timeInput = document.createElement('input');
         timeInput.type = 'time';
         timeInput.value = timeValue;
@@ -52,8 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Кнопка "Напомнить"
         const remindBtn = document.createElement('button');
         remindBtn.textContent = 'Напомнить';
-        remindBtn.classList.add('button');
-        remindBtn.style.marginLeft = "5px";
+        remindBtn.classList.add('compact-button');
         remindBtn.addEventListener('click', () => {
           if (!timeValue) {
             alert('Выберите время');
@@ -72,13 +71,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         timeWrapper.appendChild(remindBtn);
         
-        // Кнопка "Удалить время"
+        // Кнопка "Удалить" для удаления этого времени
         const deleteTimeBtn = document.createElement('button');
-        deleteTimeBtn.textContent = 'Удалить время';
-        deleteTimeBtn.classList.add('button');
-        deleteTimeBtn.style.marginLeft = "5px";
+        deleteTimeBtn.textContent = 'Удалить';
+        deleteTimeBtn.classList.add('compact-button');
         deleteTimeBtn.addEventListener('click', () => {
-          // Удаляем время из массива и обновляем отображение
           vitamin.times.splice(tIndex, 1);
           saveVitaminsData();
           renderVitamins();
@@ -90,10 +87,9 @@ document.addEventListener('DOMContentLoaded', () => {
       
       // Кнопка для добавления нового времени
       const addTimeBtn = document.createElement('button');
-      addTimeBtn.textContent = 'Добавить время приема';
-      addTimeBtn.classList.add('button');
+      addTimeBtn.textContent = 'Добавить время';
+      addTimeBtn.classList.add('compact-button');
       addTimeBtn.addEventListener('click', () => {
-        // Создаем обертку для ввода нового времени
         const timeWrapper = document.createElement('div');
         timeWrapper.style.marginTop = "5px";
         
@@ -102,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
         timeInput.classList.add('time-input');
         timeWrapper.appendChild(timeInput);
         
-        // Обработчик изменения – добавляем время в данные
+        // При изменении значения времени добавляем его в данные
         timeInput.addEventListener('change', () => {
           if (timeInput.value) {
             vitamin.times.push(timeInput.value);
@@ -117,8 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Кнопка для удаления витамина
       const deleteVitaminBtn = document.createElement('button');
       deleteVitaminBtn.textContent = 'Удалить витамин';
-      deleteVitaminBtn.classList.add('button');
-      deleteVitaminBtn.style.marginTop = "5px";
+      deleteVitaminBtn.classList.add('compact-button');
       deleteVitaminBtn.addEventListener('click', () => {
         if (confirm(`Удалить ${vitamin.name}?`)) {
           vitaminsData.splice(index, 1);
