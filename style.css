@@ -86,3 +86,15 @@ p {
   margin-top: 5px;
   font-size: 14px;
 }
+
+.compact-button {
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 2px;
+  background: linear-gradient(to right, #05D243, gray);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 12px;
+  cursor: pointer;
+}
