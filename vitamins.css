@@ -1,0 +1,42 @@
+/* vitamins.css */
+
+/* Компактная кнопка для элементов на странице витаминов */
+.compact-button {
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 2px;
+  background: linear-gradient(to right, #05D243, gray);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* Обновлённый вид для обёртки времени приёма */
+.times-container > div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+/* Стили для поля времени – делаем его меньше */
+.time-input {
+  padding: 3px;
+  font-size: 14px;
+  width: 80px;
+  margin-right: 5px;
+}
+
+/* Заголовок витамина можно немного уменьшить */
+.vitamin-row h3 {
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+/* Кнопки, созданные внутри vitamin-row, будут использовать компактный стиль */
+.vitamin-row button {
+  padding: 5px 10px;
+  font-size: 12px;
+  margin: 2px;
+}
