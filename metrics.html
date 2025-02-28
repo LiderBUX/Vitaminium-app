@@ -20,7 +20,8 @@
       </div>
       <div>
         <label for="blood-pressure">АД (давление):</label><br>
-        <input type="text" id="blood-pressure" name="blood-pressure" placeholder="например, 120/80" required>
+        <!-- Убираем required, чтобы поле было опциональным -->
+        <input type="text" id="blood-pressure" name="blood-pressure" placeholder="например, 120/80">
       </div>
       <div>
         <label for="sugar-level">Уровень сахара:</label><br>
@@ -42,10 +43,5 @@
   </div>
   
   <script src="metrics.js"></script>
-
-  <footer class="footer">
-  <p>© Дневник здоровья Vitaminium</p>
-</footer>
-
 </body>
 </html>
