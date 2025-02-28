@@ -145,3 +145,33 @@ document.addEventListener('DOMContentLoaded', () => {
     renderVitamins();
   }
 });
+
+// Обработчик отправки формы для записи показателей
+metricsForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const date = document.getElementById("metrics-date").value;
+  const time = document.getElementById("metrics-time").value;
+  const bloodPressure = document.getElementById("blood-pressure").value;
+  const sugarLevel = document.getElementById("sugar-level").value;
+  const temperature = document.getElementById("temperature").value;
+  
+  // Проверяем, что заполнены дата, время и хотя бы один показатель
+  if (date === "" || time === "" || (bloodPressure === "" && sugarLevel === "" && temperature === "")) {
+    alert("Заполните дату, время и хотя бы один показатель: АД, уровень сахара или температуру");
+    return;
+  }
+  
+  // Формируем новый объект записи
+  const newRecord = {
+    date: date,
+    time: time,
+    bloodPressure: bloodPressure || "",
+    sugarLevel: sugarLevel || "",
+    temperature: temperature || ""
+  };
+  
+  metricsData.push(newRecord);
+  saveMetricsData();
+  renderMetrics();
+  metricsForm.reset();
+});
