@@ -72,3 +72,17 @@ p {
 .advice-content {
     text-align: left;
 }
+
+.metric-record {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px 0;
+  text-align: left;
+  background: #fff;
+}
+
+.metric-record button {
+  margin-top: 5px;
+  font-size: 14px;
+}
