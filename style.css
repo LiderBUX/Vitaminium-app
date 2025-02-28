@@ -34,6 +34,13 @@ p {
     border-radius: 10px;
     font-size: 16px;
     cursor: pointer;
+    text-align: left; /* Текст по левому краю для главных кнопок */
+    padding-left: 15px;
+}
+
+.center-button {
+    text-align: center !important;
+    padding-left: 0; /* Убираем отступ слева */
 }
 
 /* Дополнительные стили для страницы приёма витаминов */
