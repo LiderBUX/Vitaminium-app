@@ -98,3 +98,29 @@ p {
   font-size: 12px;
   cursor: pointer;
 }
+
+.wellbeing-record {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px 0;
+  text-align: left;
+  background: #fff;
+}
+
+.wellbeing-record p {
+  margin: 5px 0;
+}
+
+.compact-button {
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 2px;
+  background: linear-gradient(to right, #05D243, gray);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
