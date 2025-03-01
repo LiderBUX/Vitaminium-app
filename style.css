@@ -1,126 +1,79 @@
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f3f4f6;
-    margin: 0;
-    padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f3f4f6;
+  margin: 0;
+  padding: 20px;
+  line-height: 1.6;
 }
 
 .container {
-    max-width: 400px;
-    background: white;
-    padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: auto;
+  max-width: 800px;
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 h1 {
-    color: #333;
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 20px;
 }
 
 p {
-    color: #666;
+  margin: 10px 0;
 }
 
+section {
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.recs-list {
+  margin-left: 20px;
+  list-style-type: none;
+  padding: 0;
+}
+
+.recs-list li {
+  margin-bottom: 8px;
+}
+
+.recs-list li:before {
+  content: "• ";
+  color: #05D243;
+}
+
+.highlight {
+  font-weight: bold;
+}
+
+/* Стиль для кнопок */
 .button {
-    display: block;
-    width: 100%;
-    padding: 15px;
-    margin: 10px 0;
-    background: linear-gradient(to right, #05D243, gray);
-    color: white;
-    border: none;
-    border-radius: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    text-align: left; /* Текст по левому краю для главных кнопок */
-    padding-left: 15px;
+  display: block;
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  background: linear-gradient(to right, #05D243, gray);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: left;
+  padding-left: 15px;
 }
 
+/* Центрирование для кнопок, которые этого требуют */
 .center-button {
-    text-align: center !important;
-    padding-left: 0; /* Убираем отступ слева */
+  text-align: center !important;
+  padding-left: 0;
 }
-
-/* Дополнительные стили для страницы приёма витаминов */
-.vitamin-row {
-    border: 1px solid #ddd;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 10px;
-}
-
-.times-container {
-    margin-top: 10px;
-    text-align: left;
-}
-
-.time-input {
-    padding: 5px;
-}
-
-.footer {
-  text-align: center;
-  padding: 15px 0;
-  font-size: 14px;
-  color: #333;
-  border-top: 1px solid #ddd;
-  margin-top: 40px;
-}
-
-.advice-content {
-    text-align: left;
-}
-
-.metric-record {
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 10px;
-  margin: 10px 0;
-  text-align: left;
-  background: #fff;
-}
-
-.metric-record button {
-  margin-top: 5px;
-  font-size: 14px;
-}
-
-.compact-button {
-  display: inline-block;
-  padding: 5px 10px;
-  margin: 2px;
-  background: linear-gradient(to right, #05D243, gray);
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 12px;
-  cursor: pointer;
-}
-
-.wellbeing-record {
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 10px;
-  margin: 10px 0;
-  text-align: left;
-  background: #fff;
-}
-
-.wellbeing-record p {
-  margin: 5px 0;
-}
-
-.compact-button {
-  display: inline-block;
-  padding: 5px 10px;
-  margin: 2px;
-  background: linear-gradient(to right, #05D243, gray);
-  color: white;
-  border: none;
-  border-radius: 5px;
-  font-size: 12px;
-  cursor: pointer;
-}
-
