@@ -27,9 +27,10 @@ h1 {
 details {
   border: 1px solid #ddd;
   border-radius: 5px;
-  padding: 10px;
   margin-bottom: 15px;
   background-color: #fafafa;
+  padding: 0; /* убираем лишние отступы, чтобы сделать вид похожим на кнопку */
+  overflow: hidden;
 }
 
 summary {
@@ -37,6 +38,11 @@ summary {
   font-weight: bold;
   cursor: pointer;
   outline: none;
+  background: linear-gradient(to right, #05D243, gray);
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 0;
 }
 
 summary::-webkit-details-marker {
@@ -55,24 +61,41 @@ summary:after {
 
 /* Стили для содержимого рекомендаций */
 .recs {
-  margin-top: 10px;
-  padding-left: 20px;
+  padding: 10px 20px;
+  background-color: #fff;
+}
+
+.recs ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .recs li {
   margin-bottom: 8px;
+  position: relative;
+  padding-left: 24px;
+}
+
+.recs li:before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #05D243;
+  font-weight: bold;
 }
 
 /* Кнопка "Вернуться на главную" */
 .center-button {
   display: block;
-  width: auto;
-  margin: 20px auto;
-  padding: 10px 15px;
+  width: 100%;
+  padding: 15px;
+  margin: 20px auto 0;
   background: linear-gradient(to right, #05D243, gray);
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
+  font-size: 16px;
   cursor: pointer;
   text-align: center;
 }
