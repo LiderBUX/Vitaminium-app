@@ -18,8 +18,25 @@
         <button class="button">📌 Женский календарь</button>
         <button class="button" onclick="window.location.href='advice.html'">💡 Памятка пациента</button>
         <button class="button">🛒 Каталог</button>
-        <button class="button">📢 Поделиться с друзьями</button>
+        <button id="shareButton">📢 Поделиться с друзьями</button>
   </div>
+  <script>
+    document.getElementById("shareButton").addEventListener("click", async () => {
+        if (navigator.share) {
+            try {
+                await navigator.share({
+                    title: "Дневник здоровья - Vitaminium",
+                    text: "Ведите дневник здоровья и не забывайте о приёме витаминов!",
+                    url: window.location.href // Можно заменить на нужную ссылку
+                });
+            } catch (error) {
+                console.error("Ошибка при отправке", error);
+            }
+        } else {
+            alert("Ваш браузер не поддерживает функцию 'Поделиться'");
+        }
+    });
+  </script>
       <footer class="footer">
         <p>© Дневник здоровья Vitaminium</p>
       </footer> 
