@@ -77,23 +77,23 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.getElementById("exportData").addEventListener("click", function () {
-    // Получаем данные из localStorage
-    let measurements = JSON.parse(localStorage.getItem("measurements")) || [];
+    // Получаем данные из localStorage под ключом "metricsData"
+    let metrics = JSON.parse(localStorage.getItem("metricsData")) || [];
 
-    if (measurements.length === 0) {
+    if (metrics.length === 0) {
         alert("Нет данных для выгрузки!");
         return;
     }
 
     // Формируем текстовый формат данных
     let textData = "Дневник измерений:\n\n";
-    measurements.forEach((entry, index) => {
+    metrics.forEach((entry, index) => {
         textData += `Запись ${index + 1}:\n`;
         textData += `📅 Дата: ${entry.date}\n`;
         textData += `🕒 Время: ${entry.time}\n`;
-        textData += `🩸 Давление: ${entry.bp_systolic}/${entry.bp_diastolic} мм рт. ст.\n`;
-        textData += `🍬 Уровень сахара: ${entry.sugar} ммоль/л\n`;
-        textData += `🌡️ Температура: ${entry.temperature} °C\n`;
+        textData += `🩸 Давление: ${entry.bloodPressure}\n`;
+        textData += `🍬 Уровень сахара: ${entry.sugarLevel}\n`;
+        textData += `🌡️ Температура: ${entry.temperature}\n`;
         textData += `------------------------\n`;
     });
 
