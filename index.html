@@ -17,8 +17,19 @@
         <button class="button" onclick="window.location.href='recommendations.html'">🔔 Рекомендации</button>
         <button class="button">📌 Женский календарь</button>
         <button class="button" onclick="window.location.href='advice.html'">💡 Памятка пациента</button>
-        <button class="button">🛒 Каталог</button>
+        <button id="catalogButton">🛒 Открыть каталог магазина</button>
   </div> 
+  <script>
+  document.getElementById("catalogButton").addEventListener("click", () => {
+    // Если приложение запущено внутри Telegram
+    if (typeof Telegram !== 'undefined' && Telegram.WebApp && Telegram.WebApp.openLink) {
+      Telegram.WebApp.openLink("https://vitaminium.shop", { try_instant_view: true });
+    } else {
+      // Если не внутри Telegram – просто переходим по ссылке
+      window.location.href = "https://vitaminium.shop";
+    }
+  });
+</script>
       <footer class="footer">
         <p>© Дневник здоровья Vitaminium</p>
       </footer> 
