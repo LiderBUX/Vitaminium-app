@@ -75,3 +75,33 @@ document.addEventListener('DOMContentLoaded', () => {
     renderMetrics();
   }
 });
+
+document.getElementById("exportData").addEventListener("click", function () {
+    // Получаем данные из localStorage
+    let measurements = JSON.parse(localStorage.getItem("measurements")) || [];
+
+    if (measurements.length === 0) {
+        alert("Нет данных для выгрузки!");
+        return;
+    }
+
+    // Формируем текстовый формат данных
+    let textData = "Дневник измерений:\n\n";
+    measurements.forEach((entry, index) => {
+        textData += `Запись ${index + 1}:\n`;
+        textData += `📅 Дата: ${entry.date}\n`;
+        textData += `🕒 Время: ${entry.time}\n`;
+        textData += `🩸 Давление: ${entry.bp_systolic}/${entry.bp_diastolic} мм рт. ст.\n`;
+        textData += `🍬 Уровень сахара: ${entry.sugar} ммоль/л\n`;
+        textData += `🌡️ Температура: ${entry.temperature} °C\n`;
+        textData += `------------------------\n`;
+    });
+
+    // Создаём файл
+    let blob = new Blob([textData], { type: "text/plain" });
+    let link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "health_diary.txt"; // Название файла
+    link.click();
+});
+
